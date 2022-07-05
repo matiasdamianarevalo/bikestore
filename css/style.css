@@ -37,22 +37,13 @@ h3{
     text-align: center;
 }
 #hovercard:hover{
-    scale: 1.05;
+    transform: scale(1.05);
     transition: 0.7s;
 }
 .header{
     z-index: 0;
     border-radius: 3px;
     grid-area: header; 
-}
-.sidebar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 3px;
-    color: #0a9396;
-    grid-area: sidebar;
 }
 .main{ 
     display: flex;
@@ -75,7 +66,7 @@ h3{
     text-align: center;
 }
 .img{
-    opacity: 0.8;
+    opacity: 1.5;
     width: 100%;
     text-align: center;
 }
@@ -92,7 +83,6 @@ h3{
     .grid-container{
         grid-template:
         "header" auto
-        "sidebar"auto
         "main"   auto
         "footer" 80px /
          auto;
@@ -112,7 +102,6 @@ h3{
     .grid-container{
         grid-template:
         "header" auto
-        "sidebar"auto
         "main"   auto
         "footer" 80px /
          auto;
@@ -131,8 +120,8 @@ h3{
 @media (min-width: 1024px) {
     .grid-container{
         grid-template:
-        "header  header"  auto
-        "sidebar main" auto
+        "header  header"   auto
+        "main     main"    auto
         "footer  footer"  80px /
          300px    auto;
     }
